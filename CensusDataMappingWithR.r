@@ -124,7 +124,10 @@ leafletMap <-leaflet() %>%
               )) %>% # selecting the popup text created earlier to display when a polygon is clicked
   addLegend(pal = pal, # adding legend, using the pal object from above with our colors and categories
             values = data$medIncCat, # selecting the values for the legend, same as the fillColor above
-            position = "bottomright")
+            position = "bottomleft",
+            title="Median Income <br>
+            <small>2015-2019 </small> 
+            <hr>") # the title can be customized with HTML
 
 # display the leaflet map
 leafletMap
